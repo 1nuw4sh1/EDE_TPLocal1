@@ -1,0 +1,107 @@
+﻿@model EDE_TPLOCAL1.Models.FormModel
+@using EDE_TPLOCAL1.Models
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> HN - TP Local 1 </title>
+        <link rel="stylesheet" href="~/resources/Form.css" />
+    </head>
+
+
+
+    <body>
+        @{
+            var entetePage = new EnteteMenuModel
+            {
+                Titre = "Page de validation",
+                Rubriques = new List<RubriqueModel>
+                        {
+                            new RubriqueModel { Name = "Accueil", Url = "Home/Index" },
+                            new RubriqueModel { Name = "Liste avis", Url = "Home/Index/OpinionList" }
+                        }
+            };
+        }
+        <partial name="EnteteMenu" model="entetePage" />
+
+        <section class="SectionForm">
+            <p> Votre formulaire a bien été pris en compte. </p>
+        
+            <!-- Formulaire informations personnelles -->
+            <div class="InfosPerso">
+                <h3> Informations personnelles </h3>
+                <table>
+                    <tr>
+                        <td> <label for="Nom"> Nom </label> </td>
+                        <td> @Model.Nom </td>
+                    </tr>
+                
+                    <tr>
+                        <td> <label for="Prenom"> Prénom </label> </td>
+                        <td> @Model.Prenom </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label for="Sexe"> Sexe </label> </td>
+                        <td> @Model.Sexe </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Adresse"> Adresse </label> </td>
+                        <td> @Model.Adresse </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="CodePostal"> Code Postal </label> </td>
+                        <td> @Model.CodePostal </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Ville"> Ville </label> </td>
+                        <td> @Model.Ville </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="AdresseMail"> Adresse Mail </label>     </td>
+                        <td> @Model.AdresseMail </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Formulaire informations formation -->
+            <div class="InfosFormation">
+                <h3> Informations formation suivie </h3>
+                <table>
+                    <tr>
+                        <td> <label for="DateDebutFormation"> Date début formation </label> </td>
+                        <td> @Model.DateDebutFormation?.ToString("dd/MM/yyyy") </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="FormationSuivie"> Formation suivie </label> </td>
+                        <td> @Model.FormationSuivie </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Formulaire avis formation -->
+            <div class="AvisFormation">
+                <h3> Avis sur la formation</h3>
+                <table>
+                    <tr>
+                        <td> 
+                            <label for="AvisFormationCobol"> Formation Cobol </label> 
+                        </td>
+                        <td> @Model.AvisFormationCobol </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <label for="AvisFormationCSharp"> Formation C# </label> 
+                        </td>
+                        <td> @Model.AvisFormationCSharp </td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+﻿@import "Index.css";
+
+section.SectionForm {
+    margin-left: 200px;
+}
+
+div {
+    width: 500px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+td:first-child {
+    width: 35%;
+    text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="date"],
+select, textarea {
+    width: 95%;
+}
+
+.text-danger {
+    color: red;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.bouton {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 15px;
+    vertical-align: bottom;
+    cursor: pointer;
+}

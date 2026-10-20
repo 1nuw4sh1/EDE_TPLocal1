@@ -1,0 +1,18 @@
+﻿@model EDE_TPLOCAL1.Models.EnteteMenuModel
+
+
+<header>
+    <img src="~/resources/GroupeHN.png"
+         class="image"
+         alt="GroupeHN" />
+    <h1> @Model.Titre </h1>
+</header>
+
+<nav>
+    <ul>
+        @foreach (var item in Model.Rubriques)
+        {
+            <li> <a href="~/@item.Url"> @item.Name </a> </li>
+        }
+    </ul>
+</nav>

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Xml;
+﻿using System.Xml;
 
 
 //This file is not to be modified
-namespace TPLOCAL1.Models
+namespace EDE_TPLOCAL1.Models
 {
     public class OpinionList
     {

@@ -1,4 +1,4 @@
-namespace TPLOCAL1.Models
+namespace EDE_TPLOCAL1.Models
 {
     public class ErrorViewModel
     {

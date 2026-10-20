@@ -1,0 +1,35 @@
+﻿@import "Index.css";
+
+section.SectionOpinionList {
+    margin-left: 200px;
+    width: 500px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+td:first-child {
+    width: 35%;
+}
+
+td:nth-child(2) {
+    width: 35%;
+}
+
+.Oui {
+    background-color: green;
+    color: white;
+}
+
+.Non {
+    background-color: red;
+    color: white;
+}
